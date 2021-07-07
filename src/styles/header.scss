@@ -1,0 +1,19 @@
+@import "./colors.scss";
+.header {
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    font-size: 2rem;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: $indigo;
+    .left {
+        color: $rust;
+        font-weight: 700;;
+    }
+    .right {
+        display: flex;
+        justify-content: space-between;
+        width: 21rem;
+    }
+}

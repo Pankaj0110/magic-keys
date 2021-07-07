@@ -1,0 +1,53 @@
+@import "./colors.scss";
+.popup-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  height: 18rem;
+  width: 30rem;
+  transform: translate(-50%, -50%);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 7px 7px 5px #888888;
+  .title {
+    height: 3rem;
+    width: auto;
+    background-color: $rust;
+    color: $white;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-size: 1.3rem;
+    border: 1px solid $rust;
+    border-radius: 5px 5px 0px 0px;
+  }
+  .content {
+    height: 6.4rem;
+    width: auto;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  .modal-footer {
+    height: 5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    button {
+      margin-right: 1.5rem;
+    }
+  }
+}

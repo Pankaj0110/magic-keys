@@ -1,0 +1,32 @@
+@import "./colors.scss";
+
+.footer {
+  background-color: $indigo;
+  height: 8.5rem;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  .title {
+    width: 70%;
+    color: $rust;
+    font-size: 1.5rem;
+  }
+  .section {
+    padding: 1rem 2rem;
+    width: 30%;
+  }
+
+  .ctrl.footer {
+    display: flex;
+    flex-direction: column;
+    .item {
+      width: 15rem;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $rust;
+      .label {
+        width: 8rem;
+      }
+    }
+  }
+}

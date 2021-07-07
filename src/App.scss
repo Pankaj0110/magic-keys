@@ -1,0 +1,112 @@
+@import "./styles/colors.scss";
+
+body {
+  background-color: $indigo;
+}
+button.btn {
+  border: 1px solid $rust;
+  border-radius: 5px;
+  &.btn-primary {
+    width: 10rem;
+    height: 3rem;
+    background-color: $rust;
+    color: $white;
+    font-size: 1.4rem;
+    &.btn-primary-sm {
+      width: 7rem;
+      height: 2rem;
+      font-size: 1.2rem;
+    }
+    &:hover {
+      background-color: $off-rust;
+      cursor: pointer;
+    }
+  }
+  &.btn-secondary {
+    width: 5rem;
+    height: 2rem;
+    background-color: $rust;
+    color: $white;
+    &:hover {
+      background-color: $off-rust;
+    }
+  }
+  &.btn-black {
+    background-color: $dark;
+    width: 10rem;
+    height: 3rem;
+    color: $white;
+    font-size: 1.4rem;
+    &:hover {
+      cursor: pointer;
+      background-color: $dark;
+    }
+  }
+  &.btn-default {
+    background-color: $gray;
+    border: 1px solid $gray;
+    height: 2rem;
+    width: 7rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+textarea.txtArea {
+  border: 2px solid $rust;
+  height: 40rem;
+  padding: 2rem;
+  width: calc(100vw - 145px);
+  padding-top: 1rem;
+}
+
+select.slct {
+  &.slct-secondary {
+    width: 6rem;
+    height: 1.5rem;
+    border: 1px solid $rust;
+    border-radius: 5px;
+    color: $white;
+    background-color: $rust;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: $indigo;
+}
+
+.ctrl {
+  width: 10rem;
+  padding: 0.25rem 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  label {
+    color: $dark;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 5rem;
+  }
+}
+
+.section {
+  padding: 1rem 2rem;
+}
+
+#layover {
+  position: fixed;
+  height: 100vh;
+  width: 100vh;
+  background-color: rgba(0, 0, 0, 3);
+  z-index: 888;
+  display: none;
+}
+
+#popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
