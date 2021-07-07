@@ -10,22 +10,26 @@
     width: 70%;
     color: $rust;
     font-size: 1.5rem;
+    padding: 0.2rem 0rem;
+    text-shadow: 0px 1px 1px #aaa;
   }
   .section {
     padding: 1rem 2rem;
     width: 30%;
   }
 
-  .ctrl.footer {
+  .ctrl.footer-controll {
     display: flex;
     flex-direction: column;
     .item {
       width: 15rem;
+      padding: 0.2rem 0rem;
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid $rust;
-      .label {
-        width: 8rem;
+      font-size: 1.2rem;;
+      label {
+        width: 10rem;
       }
     }
   }

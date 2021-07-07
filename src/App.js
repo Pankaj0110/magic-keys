@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Header, TextArea, Footer, Popup } from "./component";
+import { Header, TextArea, Footer, Popup, Sounds } from "./component";
 import {
   getCurrentTime,
   defaultSize,
@@ -30,10 +30,6 @@ function App() {
   const textRef = useRef(null);
 
   useEffect(() => {
-    textRef.current.disabled = true;
-    if (startTime > 0) textRef.current.disabled = false;
-  }, [startTime]);
-  useEffect(() => {
     return function cleanup() {
       clearInterval(intervalId);
       clearTimeout(timeoutId);
@@ -45,10 +41,10 @@ function App() {
    */
   const startTest = () => {
     //textRef.current.disabled = false;
-    
+    updateTextValue("");
     textRef.current.value = "";
     const onSubmitOnTimeOver = () => {
-      textRef.current.disabled = true;
+      // textRef.current.disabled = true;
       setModalData(null);
     };
     setStartTime(() => getCurrentTime());
@@ -73,6 +69,7 @@ function App() {
           onSubmitOnTimeOver // onSubmit button click
         )
       );
+      updateResult(getResults(textRef.current.value, duration)); // ref is used to avoid the clousure
     }, 1000 * 60 * duration);
     
     setIntervalId(interval);
@@ -106,6 +103,7 @@ function App() {
   };
 
   const updateText = (e) => {
+    if(remainingTime > 0)
     updateTextValue(e.target.value);
   };
 
@@ -132,7 +130,7 @@ function App() {
         restart={restart}
         conclude={conclude}
       />
-      <TextArea fontsize={fontSize} updatetext={updateText} ref={textRef} />
+      <TextArea fontsize={fontSize} updatetext={updateText} text={text} ref={textRef} />
       <Footer
         handlefontsize={setFontSize}
         starttime={startTime}

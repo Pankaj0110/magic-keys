@@ -53,9 +53,17 @@ button.btn {
   }
 }
 
+.pink-checkbox {
+  border: 1px solid $rust;
+  &:checked {
+    background-color: $rust;
+    color: $white;
+  }
+}
+
 textarea.txtArea {
   border: 2px solid $rust;
-  height: 40rem;
+  height: 25rem;
   padding: 2rem;
   width: calc(100vw - 145px);
   padding-top: 1rem;
@@ -109,4 +117,8 @@ select.slct {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.control-hidden {
+  display: none;
 }

@@ -11,7 +11,7 @@ export function getCurrentTime() {
 export function getResults(text, duration) {
   var graphObj = {};
   const strokes = text.length;
-  const words = text.split(" ").length;
+  const words = strokes > 0 ? text.split(" ").length : 0;
   text.split(" ").forEach((letter) => {
     if (graphObj.hasOwnProperty(letter)) {
       graphObj[letter] = graphObj[letter] + 1;
