@@ -10,4 +10,4 @@ kumar.pankaj0110@gmail.com
 
 ### Description
 This application uses React as a major library. 
-SCSS, HTML, CSS and Javascript are used heavily to develop this web application
+SCSS, HTML, CSS and Javascript is used to develop this web application
